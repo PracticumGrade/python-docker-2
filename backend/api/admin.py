@@ -4,7 +4,7 @@ from .models import Note
 
 
 class NoteAdmin(admin.ModelAdmin):
-    list_display = ('title', 'text')
+    list_display = ('title', 'description', 'completed')
 
 
 admin.site.register(Note, NoteAdmin)

@@ -9,6 +9,7 @@ COPY requirements.txt ./
 
 RUN pip install -r requirements.txt --no-cache-dir
 
-COPY backend ./
+COPY . .
 
-CMD ["gunicorn", "--bind", "0.0.0.0:8080", "simple_project.wsgi"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8080", "backend.wsgi"]
+
